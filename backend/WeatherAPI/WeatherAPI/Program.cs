@@ -2,6 +2,7 @@ using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using WeatherAPI.Services;
 
 Log.Logger = new LoggerConfiguration()
   .WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff}|{Level:u3}|{SourceProgram}|{SourceContext}|{Message:1j}{NewLine}{Exception}")
@@ -17,6 +18,7 @@ try
     .ReadFrom.Configuration(context.Configuration)
     .ReadFrom.Services(services));
 
+  builder.Services.AddScoped<IWeatherService, WeatherService>();
   builder.Services.AddControllers();
   
   var app = builder.Build();

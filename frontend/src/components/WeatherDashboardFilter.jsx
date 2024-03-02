@@ -32,7 +32,7 @@ const WeatherDashboardFilter = (props) => {
             label="Country"
             onChange={handleChangeCountry}
           >
-            {props.countryOptions.map(x => <MenuItem value={x.value}>{x.text}</MenuItem>)}
+            {props.countryOptions.map(x => <MenuItem key={x.value} value={x.value}>{x.text}</MenuItem>)}
           </Select>
         </FormControl>
       </Grid>

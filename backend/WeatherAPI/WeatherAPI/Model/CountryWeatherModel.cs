@@ -11,6 +11,6 @@ public class CountryWeatherModel
     [JsonProperty("countryCode")]
     public string CountryCode { get; set; }
 
-    [JsonProperty("weather")]
-    public List<CurrentWeatherModel> Weather { get; set; }
+    [JsonProperty("dates")]
+    public List<CountryDateWeatherModel> Dates { get; set; }
 }

@@ -7,7 +7,7 @@ const parseDate = (dt) => {
 
 const formatDate = (dt, format = 'YYYY-MM-DD') => {
   if (!dt || Object.prototype.toString.call(dt) !== '[object Date]') return '';
-  return moment.format(dt, format);
+  return moment(dt).format(format);
 }
 
 export default {
