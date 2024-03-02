@@ -98,6 +98,7 @@ public class WeatherController : ControllerBase
     return new ObjectResult(res);
   }
 
+  /*
   [HttpGet]
   [Route("forecast")]
   public IActionResult GetWeatherForecast([FromQuery] string? countryCode, [FromQuery] DateTime startDate)
@@ -142,7 +143,9 @@ public class WeatherController : ControllerBase
     
     return new ObjectResult(res);
   }
+  */
 
+  /*
   private List<CountryModel> GetDummyCountries()
   {
     var res = new List<CountryModel>();
@@ -180,4 +183,5 @@ public class WeatherController : ControllerBase
     res.Add(new ForecastWeatherModel { TempC = "27.1", TempF = "77.7", Icon = "https://cdn.weatherapi.com/weather/64x64/day/353.png", Date = new DateTime(2024, 3, 8).ToString("s")});
     return res;
   }
+  */
 }
