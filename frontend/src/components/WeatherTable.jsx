@@ -96,7 +96,7 @@ const WeatherTable = (props) => {
                   {row.weather.map((weather) => (
                     <TableCell align="center" key={weather.interval}>
                       <img src={weather.icon}/><br/>
-                      <span>{`${weather.tempC} C / ${weather.tempF} F`}</span>
+                      <span>{`${weather.tempC} \u00b0C / ${weather.tempF} \u00b0F`}</span>
                     </TableCell>
                   ))}
                 </TableRow>
