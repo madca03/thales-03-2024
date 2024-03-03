@@ -27,10 +27,16 @@ const WeatherTable = (props) => {
 
     // filter by the user's selected date
     if (props.selectedDate?.isValid() ?? false) {
-      const dt = DateUtil.formatDate(props.selectedDate.toDate(), "YYYY-MM-DD");
-
       for (const country of countries) {
-        country.dates = country.dates.filter(cd => cd.date === dt);
+        country.dates = country.dates.filter(cd => {
+          const timeDifferenceInDays = DateUtil.getTimeDifferenceInDays(DateUtil.parseDate(cd.date), props.selectedDate.toDate());
+          const lessThan7Days = timeDifferenceInDays >= 0 && timeDifferenceInDays <= 7;
+          return lessThan7Days;
+        }).slice(0,7);
+      }
+    } else {
+      for (const country of countries) {
+        country.dates = country.dates.slice(0,1);
       }
     }
 
@@ -43,7 +49,13 @@ const WeatherTable = (props) => {
         setIntervalOrder(res.intervalOrder);
         setDates(res.dates);
         setCountryWeatherData(res.countries);
-        setData(transformWeatherResponse(res.countries));
+
+        const initialCountriesData = _.cloneDeep(res.countries);
+        for (const country of initialCountriesData) {
+          country.dates = country.dates.slice(0,1);
+        }
+
+        setData(transformWeatherResponse(initialCountriesData));
       });
   }
 
