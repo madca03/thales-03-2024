@@ -1,0 +1,386 @@
+[2024-11-09 21:25:49 ERR] An error occurred using the connection to database 'StudentEnrollment' on server 'localhost\ALLEN-DESKTOP'.
+[2024-11-09 21:25:49 ERR] An exception occurred while iterating over the results of a query for context type 'StudentEnrollment.Business.Repository.StudentEnrollmentContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+[2024-11-09 21:25:49 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at StudentEnrollment.API.Controllers.CourseController.Index(GetCoursesRequestModel req) in C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\Controllers\CourseController.cs:line 25
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+[2024-11-09 22:22:17 INF] Now listening on: http://localhost:5109
+[2024-11-09 22:22:17 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 22:22:17 INF] Hosting environment: Development
+[2024-11-09 22:22:17 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-09 22:26:38 INF] Application is shutting down...
+[2024-11-09 22:26:41 INF] Now listening on: http://localhost:5109
+[2024-11-09 22:26:41 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 22:26:41 INF] Hosting environment: Development
+[2024-11-09 22:26:41 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-09 22:28:18 INF] Application is shutting down...
+[2024-11-09 22:28:22 INF] Now listening on: http://localhost:5109
+[2024-11-09 22:28:22 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 22:28:22 INF] Hosting environment: Development
+[2024-11-09 22:28:22 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-09 22:28:25 WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2024-11-09 22:28:25 INF] warn: 9/11/2024 22:28:25.592 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2024-11-09 22:28:25 INF] info: 9/11/2024 22:28:25.758 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.35 initialized 'StudentEnrollmentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.35' with options: SensitiveDataLoggingEnabled 
+[2024-11-09 22:28:25 INF] dbug: 9/11/2024 22:28:25.802 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Course>()
+          .Select(c => c)
+          .Where(c => c.Name.Contains(__searchModel_Name_0))'
+[2024-11-09 22:28:25 INF] dbug: 9/11/2024 22:28:25.980 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Course>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Course.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Course.ContactPerson (string) Required MaxLength(100), 1], [Property: Course.Description (string) Required MaxLength(100), 2], [Property: Course.EndDate (DateTime) Required Index, 3], [Property: Course.Fees (double) Required, 4], [Property: Course.LocationAddress (string) Required MaxLength(100), 5], [Property: Course.Name (string) Required Index MaxLength(100), 6], [Property: Course.StartDate (DateTime) Required Index, 7] }
+              SELECT c.Id, c.ContactPerson, c.Description, c.EndDate, c.Fees, c.LocationAddress, c.Name, c.StartDate
+              FROM Course AS c
+              WHERE (@__searchModel_Name_0 LIKE N'') || (CHARINDEX(@__searchModel_Name_0, c.Name) > 0)), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Course>, 
+          StudentEnrollment.Business.Repository.StudentEnrollmentContext, 
+          False, 
+          False, 
+          True
+      )'
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.032 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.037 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (24ms).
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.049 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.218 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.228 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__searchModel_Name_0='introduction' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:28:26 INF] info: 9/11/2024 22:28:26.265 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (42ms) [Parameters=[@__searchModel_Name_0='introduction' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.299 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity with key '{Id: 1}'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.326 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity with key '{Id: 20}'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.333 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.336 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.342 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:26 INF] dbug: 9/11/2024 22:28:26.361 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'StudentEnrollmentContext' disposed.
+[2024-11-09 22:28:35 INF] Application is shutting down...
+[2024-11-09 22:28:38 INF] Now listening on: http://localhost:5109
+[2024-11-09 22:28:38 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 22:28:38 INF] Hosting environment: Development
+[2024-11-09 22:28:38 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-09 22:28:41 INF] info: 9/11/2024 22:28:41.502 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.35 initialized 'StudentEnrollmentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.35' with options: None
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.549 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Course>()
+          .Select(c => c)
+          .Where(c => c.Name.Contains(__searchModel_Name_0))'
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.740 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Course>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Course.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Course.ContactPerson (string) Required MaxLength(100), 1], [Property: Course.Description (string) Required MaxLength(100), 2], [Property: Course.EndDate (DateTime) Required Index, 3], [Property: Course.Fees (double) Required, 4], [Property: Course.LocationAddress (string) Required MaxLength(100), 5], [Property: Course.Name (string) Required Index MaxLength(100), 6], [Property: Course.StartDate (DateTime) Required Index, 7] }
+              SELECT c.Id, c.ContactPerson, c.Description, c.EndDate, c.Fees, c.LocationAddress, c.Name, c.StartDate
+              FROM Course AS c
+              WHERE (@__searchModel_Name_0 LIKE N'') || (CHARINDEX(@__searchModel_Name_0, c.Name) > 0)), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Course>, 
+          StudentEnrollment.Business.Repository.StudentEnrollmentContext, 
+          False, 
+          False, 
+          True
+      )'
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.792 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.797 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (23ms).
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.810 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.980 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:41 INF] dbug: 9/11/2024 22:28:41.987 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__searchModel_Name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:28:42 INF] info: 9/11/2024 22:28:42.023 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[@__searchModel_Name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.055 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.082 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.089 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.091 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.096 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:28:42 INF] dbug: 9/11/2024 22:28:42.115 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'StudentEnrollmentContext' disposed.
+[2024-11-09 22:29:47 INF] info: 9/11/2024 22:29:47.770 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.35 initialized 'StudentEnrollmentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.35' with options: None
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.771 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Course>()
+          .Select(c => c)
+          .Where(c => c.Name.Contains(__searchModel_Name_0))
+          .Where(c => (DateTime?)c.StartDate == __searchModel_StartDate_1)'
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.778 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Course>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Course.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Course.ContactPerson (string) Required MaxLength(100), 1], [Property: Course.Description (string) Required MaxLength(100), 2], [Property: Course.EndDate (DateTime) Required Index, 3], [Property: Course.Fees (double) Required, 4], [Property: Course.LocationAddress (string) Required MaxLength(100), 5], [Property: Course.Name (string) Required Index MaxLength(100), 6], [Property: Course.StartDate (DateTime) Required Index, 7] }
+              SELECT c.Id, c.ContactPerson, c.Description, c.EndDate, c.Fees, c.LocationAddress, c.Name, c.StartDate
+              FROM Course AS c
+              WHERE ((@__searchModel_Name_0 LIKE N'') || (CHARINDEX(@__searchModel_Name_0, c.Name) > 0)) && (c.StartDate == @__searchModel_StartDate_1)), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Course>, 
+          StudentEnrollment.Business.Repository.StudentEnrollmentContext, 
+          False, 
+          False, 
+          True
+      )'
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.782 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.783 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.784 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.785 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.786 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__searchModel_Name_0='?' (Size = 100), @__searchModel_StartDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE ((@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)) AND ([c].[StartDate] = @__searchModel_StartDate_1)
+[2024-11-09 22:29:47 INF] info: 9/11/2024 22:29:47.799 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[@__searchModel_Name_0='?' (Size = 100), @__searchModel_StartDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE ((@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)) AND ([c].[StartDate] = @__searchModel_StartDate_1)
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.800 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.801 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.802 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.802 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:47 INF] dbug: 9/11/2024 22:29:47.803 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'StudentEnrollmentContext' disposed.
+[2024-11-09 22:29:50 INF] info: 9/11/2024 22:29:50.852 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.35 initialized 'StudentEnrollmentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.35' with options: None
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.855 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.855 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.856 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.857 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.858 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__searchModel_Name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:29:50 INF] info: 9/11/2024 22:29:50.860 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[@__searchModel_Name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE (@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.861 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.862 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.862 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.863 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.863 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:29:50 INF] dbug: 9/11/2024 22:29:50.864 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'StudentEnrollmentContext' disposed.
+[2024-11-09 22:30:00 INF] info: 9/11/2024 22:30:00.899 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.35 initialized 'StudentEnrollmentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.35' with options: None
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.900 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Course>()
+          .Select(c => c)
+          .Where(c => c.Name.Contains(__searchModel_Name_0))
+          .Where(c => (DateTime?)c.EndDate == __searchModel_EndDate_1)'
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.903 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Course>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Course.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Course.ContactPerson (string) Required MaxLength(100), 1], [Property: Course.Description (string) Required MaxLength(100), 2], [Property: Course.EndDate (DateTime) Required Index, 3], [Property: Course.Fees (double) Required, 4], [Property: Course.LocationAddress (string) Required MaxLength(100), 5], [Property: Course.Name (string) Required Index MaxLength(100), 6], [Property: Course.StartDate (DateTime) Required Index, 7] }
+              SELECT c.Id, c.ContactPerson, c.Description, c.EndDate, c.Fees, c.LocationAddress, c.Name, c.StartDate
+              FROM Course AS c
+              WHERE ((@__searchModel_Name_0 LIKE N'') || (CHARINDEX(@__searchModel_Name_0, c.Name) > 0)) && (c.EndDate == @__searchModel_EndDate_1)), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Course>, 
+          StudentEnrollment.Business.Repository.StudentEnrollmentContext, 
+          False, 
+          False, 
+          True
+      )'
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.904 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.905 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.905 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.906 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.907 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__searchModel_Name_0='?' (Size = 100), @__searchModel_EndDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE ((@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)) AND ([c].[EndDate] = @__searchModel_EndDate_1)
+[2024-11-09 22:30:00 INF] info: 9/11/2024 22:30:00.911 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (4ms) [Parameters=[@__searchModel_Name_0='?' (Size = 100), @__searchModel_EndDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ContactPerson], [c].[Description], [c].[EndDate], [c].[Fees], [c].[LocationAddress], [c].[Name], [c].[StartDate]
+      FROM [Course] AS [c]
+      WHERE ((@__searchModel_Name_0 LIKE N'') OR (CHARINDEX(@__searchModel_Name_0, [c].[Name]) > 0)) AND ([c].[EndDate] = @__searchModel_EndDate_1)
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.912 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'StudentEnrollmentContext' started tracking 'Course' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.913 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.913 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.914 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'StudentEnrollment' on server 'ALLEN-DESKTOP'.
+[2024-11-09 22:30:00 INF] dbug: 9/11/2024 22:30:00.915 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'StudentEnrollmentContext' disposed.
+[2024-11-09 22:30:07 INF] Application is shutting down...
+[2024-11-09 22:30:11 INF] Now listening on: http://localhost:5109
+[2024-11-09 22:30:11 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 22:30:11 INF] Hosting environment: Development
+[2024-11-09 22:30:11 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-09 23:29:52 INF] Application is shutting down...
+[2024-11-09 23:29:56 INF] Now listening on: http://localhost:5109
+[2024-11-09 23:29:56 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-09 23:29:56 INF] Hosting environment: Development
+[2024-11-09 23:29:56 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\

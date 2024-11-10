@@ -1,0 +1,16 @@
+﻿<Application x:Class="StudentEnrollmentWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StudentEnrollmentWPF"
+             xmlns:viewModel="clr-namespace:StudentEnrollmentWPF.MVVM.ViewModel"
+             xmlns:view="clr-namespace:StudentEnrollmentWPF.MVVM.View">
+    <Application.Resources>
+         <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+             <view:HomeView/>
+         </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type TypeName=viewModel:SettingsViewModel}">
+            <view:SettingsView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

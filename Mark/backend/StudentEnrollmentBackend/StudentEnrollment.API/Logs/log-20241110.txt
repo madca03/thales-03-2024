@@ -1,0 +1,21 @@
+[2024-11-10 10:54:16 INF] Application is shutting down...
+[2024-11-10 11:01:21 INF] Now listening on: http://localhost:5109
+[2024-11-10 11:01:21 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-10 11:01:21 INF] Hosting environment: Development
+[2024-11-10 11:01:21 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-10 16:15:04 INF] Application is shutting down...
+[2024-11-10 16:15:08 INF] Now listening on: http://localhost:5109
+[2024-11-10 16:15:08 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-10 16:15:08 INF] Hosting environment: Development
+[2024-11-10 16:15:08 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-10 16:15:36 INF] Application is shutting down...
+[2024-11-10 16:15:40 INF] Now listening on: http://localhost:5109
+[2024-11-10 16:15:40 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-10 16:15:40 INF] Hosting environment: Development
+[2024-11-10 16:15:40 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-10 16:15:51 INF] Application is shutting down...
+[2024-11-10 16:15:55 INF] Now listening on: http://localhost:5109
+[2024-11-10 16:15:55 INF] Application started. Press Ctrl+C to shut down.
+[2024-11-10 16:15:55 INF] Hosting environment: Development
+[2024-11-10 16:15:55 INF] Content root path: C:\Users\Mark Allen Agaton\Documents\Allen\Scratch\Thales\Mark\backend\StudentEnrollmentBackend\StudentEnrollment.API\
+[2024-11-10 16:16:56 INF] Application is shutting down...

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.API", "StudentEnrollment.API\StudentEnrollment.API.csproj", "{A41F918B-E26E-47CE-851C-F1EC26F86392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.Business", "StudentEnrollment.Business\StudentEnrollment.Business.csproj", "{F28E93F7-CF1D-429B-9FC7-8257151BF943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.Database", "StudentEnrollment.Database\StudentEnrollment.Database.csproj", "{F2FDA914-E244-4A24-A127-C59F4854DE02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.Scripts", "StudentEnrollment.Scripts\StudentEnrollment.Scripts.csproj", "{8DA9BF9D-D49D-4D83-A2A3-6CC7014DB2E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.Common", "StudentEnrollment.Common\StudentEnrollment.Common.csproj", "{E5D6EA5A-0FDF-41CF-BB52-E614D3127E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentEnrollment.Tests", "StudentEnrollment.Tests\StudentEnrollment.Tests.csproj", "{C9CDC3FE-4ADA-4282-9A46-B60D376CD65C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41F918B-E26E-47CE-851C-F1EC26F86392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41F918B-E26E-47CE-851C-F1EC26F86392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41F918B-E26E-47CE-851C-F1EC26F86392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41F918B-E26E-47CE-851C-F1EC26F86392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28E93F7-CF1D-429B-9FC7-8257151BF943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28E93F7-CF1D-429B-9FC7-8257151BF943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28E93F7-CF1D-429B-9FC7-8257151BF943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28E93F7-CF1D-429B-9FC7-8257151BF943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FDA914-E244-4A24-A127-C59F4854DE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FDA914-E244-4A24-A127-C59F4854DE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FDA914-E244-4A24-A127-C59F4854DE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FDA914-E244-4A24-A127-C59F4854DE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA9BF9D-D49D-4D83-A2A3-6CC7014DB2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA9BF9D-D49D-4D83-A2A3-6CC7014DB2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA9BF9D-D49D-4D83-A2A3-6CC7014DB2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA9BF9D-D49D-4D83-A2A3-6CC7014DB2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D6EA5A-0FDF-41CF-BB52-E614D3127E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D6EA5A-0FDF-41CF-BB52-E614D3127E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D6EA5A-0FDF-41CF-BB52-E614D3127E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D6EA5A-0FDF-41CF-BB52-E614D3127E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9CDC3FE-4ADA-4282-9A46-B60D376CD65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9CDC3FE-4ADA-4282-9A46-B60D376CD65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9CDC3FE-4ADA-4282-9A46-B60D376CD65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9CDC3FE-4ADA-4282-9A46-B60D376CD65C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
